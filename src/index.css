@@ -1,25 +1,51 @@
 @import 'tailwindcss';
 
-@layer utilities {
-    .animate-in {
-        animation-fill-mode: both;
-    }
-
-    .slide-in-from-top {
-        animation-name: slideInFromTop;
-    }
-
-    .duration-300 {
-        animation-duration: 300ms;
-    }
+:root {
+  color: #f8fafc;
+  background-color: #020817;
+  font-family: Inter, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes slideInFromTop {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
+html {
+  scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 28%),
+    linear-gradient(180deg, #020817 0%, #020817 24%, #020817 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+a {
+  transition: all 180ms ease;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+}
+
